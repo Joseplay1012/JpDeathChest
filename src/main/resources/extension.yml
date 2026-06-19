@@ -1,0 +1,5 @@
+name: JpDeathChest
+version: '${version}'
+
+main: net.joseplay.jpDeathChest.JpDeathChest
+api-version: '1.21'
