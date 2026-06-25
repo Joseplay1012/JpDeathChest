@@ -39,6 +39,10 @@ public class DeathChestManager {
         chest.stopTime(drop);
     }
 
+    public Collection<DeathChest> getAllDeathChest(){
+        return Collections.unmodifiableCollection(deathChestMap.values());
+    }
+
     private DeathChest addDeathChestToCache(DeathChest deathChest){
         ownerChests.computeIfAbsent(deathChest.getOwnerUUID(), k -> new ArrayList<>())
                 .add(deathChest.getChestUUID());

@@ -3,6 +3,7 @@ package net.joseplay.jpDeathChest;
 import net.joseplay.allianceutils.Allianceutils;
 import net.joseplay.allianceutils.api.extensions.Alliance;
 import net.joseplay.allianceutils.api.extensions.AlliancePlugin;
+import net.joseplay.jpDeathChest.commands.DeathChestCommand;
 import net.joseplay.jpDeathChest.data.DeathChestManager;
 import net.joseplay.jpDeathChest.listeners.DeathChestEvents;
 
@@ -17,6 +18,7 @@ public final class JpDeathChest extends AlliancePlugin {
         deathChestManager.load();
 
         Alliance.getAllianceListenerManager().registerListener(this, new DeathChestEvents());
+        Alliance.getAllianceCommandManager().registerCommand(this, new DeathChestCommand());
     }
 
     @Override
